@@ -1,15 +1,25 @@
 ﻿using System.Net;
+
 using Newtonsoft.Json;
 
-using ScreepsNetworkAPI.API;
-using ScreepsNetworkAPI.API.Auth;
-using ScreepsNetworkAPI.API.User;
+using Screeps.Network.API;
+using Screeps.Network.API.Auth;
+using Screeps.Network.API.User;
 
-namespace ScreepsNetworkAPI
+namespace Screeps.Network
 {
-    public class ScreepsAPI
+    public class Client
     {
         private const string ContentType = "application/json; charset=utf-8";
+
+        private readonly WebClient _web;
+
+        public Client(string token)
+        {
+            _web = new WebClient();
+            _web.Headers["X-Token"] = token;
+        }
+        ~Client() => _web.Dispose();
 
         public string Protocol { get; set; } = "https";
         public string Host { get; set; } = "screeps.com";
@@ -17,15 +27,6 @@ namespace ScreepsNetworkAPI
 
         public string BaseURL
             => $"{Protocol}://{Host}/{ServerType.GetAPIPath()}/";
-
-        private readonly WebClient Web;
-
-        public ScreepsAPI(string token)
-        {
-            Web = new WebClient();
-            Web.Headers["X-Token"] = token;
-        }
-        ~ScreepsAPI() => Web.Dispose();
 
         public CodeResponse UploadCode(CodeRequest code)
         {
@@ -70,7 +71,7 @@ namespace ScreepsNetworkAPI
         {
             ResetWebClient();
 
-            return Web.UploadString(uri, data);
+            return _web.UploadString(uri, data);
         }
 
         private T GetResponse<T>(string uri)
@@ -84,13 +85,13 @@ namespace ScreepsNetworkAPI
         {
             ResetWebClient();
 
-            return Web.DownloadString(uri);
+            return _web.DownloadString(uri);
         }
 
         private void ResetWebClient()
         {
-            Web.BaseAddress = BaseURL;
-            Web.Headers[HttpRequestHeader.ContentType] = ContentType;
+            _web.BaseAddress = BaseURL;
+            _web.Headers[HttpRequestHeader.ContentType] = ContentType;
         }
     }
 }

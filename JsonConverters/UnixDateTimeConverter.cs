@@ -2,7 +2,7 @@
 
 using Newtonsoft.Json;
 
-namespace ScreepsNetworkAPI.JsonConverters
+namespace Screeps.Network.JsonConverters
 {
     class UnixDateTimeConverter : JsonConverter
     {

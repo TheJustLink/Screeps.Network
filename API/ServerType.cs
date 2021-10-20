@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ScreepsNetworkAPI.API
+namespace Screeps.Network.API
 {
     public enum ServerType : byte
     {
@@ -13,13 +13,14 @@ namespace ScreepsNetworkAPI.API
     {
         public static string GetAPIPath(this ServerType serverType)
         {
-            switch (serverType)
+            return serverType switch
             {
-                case ServerType.Persistent: return "api";
-                case ServerType.PTR: return "ptr/api";
-                case ServerType.Season: return "season/api";
-                default: throw new ArgumentOutOfRangeException(nameof(serverType));
-            }
+                ServerType.Persistent => "api",
+                ServerType.PTR => "ptr/api",
+                ServerType.Season => "season/api",
+
+                _ => throw new ArgumentOutOfRangeException(nameof(serverType)),
+            };
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ScreepsNetAPI.API.User
+namespace ScreepsNetworkAPI.API.User
 {
     public class NameResponse : Response
     {

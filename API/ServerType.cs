@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ScreepsNetAPI.API
+namespace ScreepsNetworkAPI.API
 {
     public enum ServerType : byte
     {

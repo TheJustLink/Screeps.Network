@@ -1,11 +1,11 @@
 ﻿using System.Net;
 using Newtonsoft.Json;
 
-using ScreepsNetAPI.API;
-using ScreepsNetAPI.API.Auth;
-using ScreepsNetAPI.API.User;
+using ScreepsNetworkAPI.API;
+using ScreepsNetworkAPI.API.Auth;
+using ScreepsNetworkAPI.API.User;
 
-namespace ScreepsNetAPI
+namespace ScreepsNetworkAPI
 {
     public class ScreepsAPI
     {

@@ -1,4 +1,4 @@
-﻿namespace ScreepsNetAPI.API.User
+﻿namespace ScreepsNetworkAPI.API.User
 {
     public class CodeResponse : Response { }
 }

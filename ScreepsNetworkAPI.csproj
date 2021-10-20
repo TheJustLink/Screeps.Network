@@ -7,8 +7,8 @@
     <ProjectGuid>{E7C23D57-C10E-4EE1-B852-72619EB20CE5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ScreepsNetAPI</RootNamespace>
-    <AssemblyName>ScreepsNetAPI</AssemblyName>
+    <RootNamespace>ScreepsNetworkAPI</RootNamespace>
+    <AssemblyName>ScreepsNetworkAPI</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

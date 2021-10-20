@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
-namespace ScreepsNetAPI.API.User
+namespace ScreepsNetworkAPI.API.User
 {
     public class CodeRequest
     {

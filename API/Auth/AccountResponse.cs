@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 
 using Newtonsoft.Json;
-using ScreepsNetAPI.JsonConverters;
+using ScreepsNetworkAPI.JsonConverters;
 
-namespace ScreepsNetAPI.API.Auth
+namespace ScreepsNetworkAPI.API.Auth
 {
     public class AccountResponse : Response
     {

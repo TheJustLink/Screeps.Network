@@ -3,20 +3,40 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Authors>Link</Authors>
-    <Company>DevLink</Company>
+    <Company></Company>
     <Description>C# implementation screeps network API</Description>
-    <RepositoryUrl>https://github.com/LinkerOK/ScreepsNetworkAPI</RepositoryUrl>
+    <RepositoryUrl>https://github.com/LinkerOK/Screeps.Network</RepositoryUrl>
     <AssemblyVersion>0.0.0.1</AssemblyVersion>
     <FileVersion>0.0.0.1</FileVersion>
-    <PackageProjectUrl>https://github.com/LinkerOK/ScreepsNetworkAPI</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/LinkerOK/Screeps.Network</PackageProjectUrl>
     <Version>0.0.1</Version>
     <PackageId>Screeps.Network</PackageId>
     <RootNamespace>Screeps.Network</RootNamespace>
     <AssemblyName>Screeps.Network</AssemblyName>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <Copyright>Copyright 2021 DevLink</Copyright>
+    <PackageTags>Screeps Network Net API Game CSharp Link</PackageTags>
+    <PackageReleaseNotes>First version</PackageReleaseNotes>
+    <PackageIcon>Icon.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryType />
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="Icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

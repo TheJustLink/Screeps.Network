@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net5.0;net48</TargetFrameworks>
     <Authors>Link</Authors>
-    <Company></Company>
+    <Company>DevLink</Company>
     <Description>C# implementation screeps network API</Description>
     <RepositoryUrl>https://github.com/LinkerOK/Screeps.Network</RepositoryUrl>
     <AssemblyVersion>0.0.0.1</AssemblyVersion>

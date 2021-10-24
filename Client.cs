@@ -51,12 +51,12 @@ namespace Screeps.Network
             {
                 using (var response = ex.Response as HttpWebResponse)
                 {
-                    if (response == null) throw ex;
+                    if (response == null) throw;
                     if (response.StatusCode == HttpStatusCode.Unauthorized)
                         return false;
                 }
 
-                throw ex;
+                throw;
             }
         }
 

@@ -6,20 +6,20 @@
     <Company>DevLink</Company>
     <Description>C# implementation screeps network API</Description>
     <RepositoryUrl>https://github.com/LinkerOK/Screeps.Network</RepositoryUrl>
-    <AssemblyVersion>0.0.1.0</AssemblyVersion>
-    <FileVersion>0.0.1.0</FileVersion>
+    <AssemblyVersion></AssemblyVersion>
+    <FileVersion></FileVersion>
     <PackageProjectUrl>https://github.com/LinkerOK/Screeps.Network</PackageProjectUrl>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <PackageId>Screeps.Network</PackageId>
     <RootNamespace>Screeps.Network</RootNamespace>
     <AssemblyName>Screeps.Network</AssemblyName>
     <PackageLicenseExpression></PackageLicenseExpression>
     <Copyright>Copyright 2021 DevLink</Copyright>
-    <PackageTags>Screeps Network Net API Game CSharp Link</PackageTags>
+    <PackageTags>Screeps Network Net API Game CSharp Link DevLink</PackageTags>
     <PackageReleaseNotes>First version</PackageReleaseNotes>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageIconUrl />
-    <RepositoryType />
+    <RepositoryType>git</RepositoryType>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>

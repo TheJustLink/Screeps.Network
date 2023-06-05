@@ -1,6 +1,7 @@
 ﻿using System.Net;
 
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 using Screeps.Network.API;
 using Screeps.Network.API.Auth;
@@ -13,11 +14,19 @@ namespace Screeps.Network
         private const string ContentType = "application/json; charset=utf-8";
 
         private readonly WebClient _web;
-
+        
         public Client(string token)
         {
             _web = new WebClient();
             _web.Headers["X-Token"] = token;
+
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                ContractResolver = new DefaultContractResolver
+                {
+                    NamingStrategy = new CamelCaseNamingStrategy()
+                }
+            };
         }
         ~Client() => _web.Dispose();
 
@@ -25,8 +34,7 @@ namespace Screeps.Network
         public string Host { get; set; } = "screeps.com";
         public ServerType ServerType { get; set; }
 
-        public string BaseURL
-            => $"{Protocol}://{Host}/{ServerType.GetAPIPath()}/";
+        public string BaseURL => $"{Protocol}://{Host}/{ServerType.GetAPIPath()}/";
 
         public CodeResponse UploadCode(CodeRequest code)
         {

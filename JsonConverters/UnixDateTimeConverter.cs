@@ -2,22 +2,19 @@
 
 using Newtonsoft.Json;
 
+using JsonSerializer = Newtonsoft.Json.JsonSerializer;
+
 namespace Screeps.Network.JsonConverters
 {
-    class UnixDateTimeConverter : JsonConverter
+    class UnixDateTimeConverter : JsonConverter<DateTime>
     {
-        public override bool CanConvert(Type objectType)
-        {
-            return objectType == typeof(DateTime);
-        }
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            var t = (long)reader.Value;
-            return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddMilliseconds(t).ToLocalTime();
-        }
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        public override void WriteJson(JsonWriter writer, DateTime value, JsonSerializer serializer)
         {
             throw new NotImplementedException();
+        }
+        public override DateTime ReadJson(JsonReader reader, Type objectType, DateTime existingValue, bool hasExistingValue, JsonSerializer serializer)
+        {
+            return DateTime.UnixEpoch.AddMilliseconds((long)reader.Value);
         }
     }
 }

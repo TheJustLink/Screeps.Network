@@ -1,26 +1,25 @@
 ﻿using System;
 
-namespace Screeps.Network.API
+namespace Screeps.Network.API;
+
+public enum ServerType : byte
 {
-    public enum ServerType : byte
-    {
-        Persistent,
-        PTR,
-        Season
-    }
+    Persistent,
+    PTR,
+    Season
+}
 
-    public static class ServerTypeExtensions
+public static class ServerTypeExtensions
+{
+    public static string GetAPIPath(this ServerType serverType)
     {
-        public static string GetAPIPath(this ServerType serverType)
+        switch (serverType)
         {
-            switch (serverType)
-            {
-                case ServerType.Persistent: return "api";
-                case ServerType.PTR: return "ptr/api";
-                case ServerType.Season: return "season/api";
+            case ServerType.Persistent: return "api";
+            case ServerType.PTR: return "ptr/api";
+            case ServerType.Season: return "season/api";
 
-                default: throw new ArgumentOutOfRangeException(nameof(serverType));
-            }
+            default: throw new ArgumentOutOfRangeException(nameof(serverType));
         }
     }
 }

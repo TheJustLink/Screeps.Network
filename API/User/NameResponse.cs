@@ -1,7 +1,6 @@
-﻿namespace Screeps.Network.API.User
+﻿namespace Screeps.Network.API.User;
+
+public class NameResponse : Response
 {
-    public class NameResponse : Response
-    {
-        public string Username;
-    }
+    public string Username;
 }

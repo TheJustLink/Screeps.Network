@@ -1,8 +1,7 @@
-﻿namespace Screeps.Network.API
+﻿namespace Screeps.Network.API;
+
+public class Response
 {
-    public class Response
-    {
-        public bool Ok;
-        public string Error;
-    }
+    public bool Ok;
+    public string Error;
 }
